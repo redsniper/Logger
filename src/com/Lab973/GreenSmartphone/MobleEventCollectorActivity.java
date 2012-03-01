@@ -76,7 +76,6 @@ public class MobleEventCollectorActivity extends Activity {
     
     class oclstart implements OnClickListener
     {
-		@Override
 		public void onClick(View v) {
 			interval=intervalbar.getProgress();
 			Intent intent=new Intent();
@@ -99,7 +98,6 @@ public class MobleEventCollectorActivity extends Activity {
     }
     class oclstop implements OnClickListener
     {
-		@Override
 		public void onClick(View v) {
 			Intent intent=new Intent();
 			intent.setClass(MobleEventCollectorActivity.this, LogService.class);
@@ -112,7 +110,6 @@ public class MobleEventCollectorActivity extends Activity {
     class osb implements OnSeekBarChangeListener
     {
 
-		@Override
 		public void onProgressChanged(SeekBar seekBar, int progress,
 				boolean fromUser) {
 			TextView tv = (TextView)findViewById(R.id.textViewScreen);    		
@@ -120,18 +117,15 @@ public class MobleEventCollectorActivity extends Activity {
     		tv.setText("Interval:"+(seekBar.getProgress()+1)+"ms");
 		}
 
-		@Override
 		public void onStartTrackingTouch(SeekBar seekBar) {	
 		}
 
-		@Override
 		public void onStopTrackingTouch(SeekBar seekBar) {
 		}
     	
     }
     class screenoccl implements OnCheckedChangeListener
     {
-		@Override
 		public void onCheckedChanged(CompoundButton buttonView,
 				boolean isChecked) {
 			if(isChecked)screenchecked=true;
@@ -140,7 +134,6 @@ public class MobleEventCollectorActivity extends Activity {
     }
     class cpuoccl implements OnCheckedChangeListener
     {
-		@Override
 		public void onCheckedChanged(CompoundButton buttonView,
 				boolean isChecked) {
 			if(isChecked)cpuchecked=true;
@@ -149,7 +142,6 @@ public class MobleEventCollectorActivity extends Activity {
     }
     class memoryoccl implements OnCheckedChangeListener
     {
-		@Override
 		public void onCheckedChanged(CompoundButton buttonView,
 				boolean isChecked) {
 			if(isChecked)memorychecked=true;
@@ -158,7 +150,6 @@ public class MobleEventCollectorActivity extends Activity {
     }
     class packetoccl implements OnCheckedChangeListener
     {
-		@Override
 		public void onCheckedChanged(CompoundButton buttonView,
 				boolean isChecked) {
 			if(isChecked)packetchecked=true;
@@ -167,8 +158,7 @@ public class MobleEventCollectorActivity extends Activity {
     }
     class threeGoccl implements OnCheckedChangeListener
     {
-    	@Override
-		public void onCheckedChanged(CompoundButton buttonView,
+    	public void onCheckedChanged(CompoundButton buttonView,
 				boolean isChecked) {
 			if(isChecked)threeGchecked=true;
 			else threeGchecked=false;		
@@ -176,8 +166,7 @@ public class MobleEventCollectorActivity extends Activity {
     }
     class wifioccl implements OnCheckedChangeListener
     {
-    	@Override
-		public void onCheckedChanged(CompoundButton buttonView,
+    	public void onCheckedChanged(CompoundButton buttonView,
 				boolean isChecked) {
 			if(isChecked)wifichecked=true;
 			else wifichecked=false;		
@@ -185,8 +174,7 @@ public class MobleEventCollectorActivity extends Activity {
     }
     class bluetoothoccl implements OnCheckedChangeListener
     {
-    	@Override
-		public void onCheckedChanged(CompoundButton buttonView,
+    	public void onCheckedChanged(CompoundButton buttonView,
 				boolean isChecked) {
 			if(isChecked)bluetoothchecked=true;
 			else bluetoothchecked=false;		
@@ -194,8 +182,7 @@ public class MobleEventCollectorActivity extends Activity {
     }
     class gpsoccl implements OnCheckedChangeListener
     {
-    	@Override
-		public void onCheckedChanged(CompoundButton buttonView,
+    	public void onCheckedChanged(CompoundButton buttonView,
 				boolean isChecked) {
 			if(isChecked)gpschecked=true;
 			else gpschecked=false;		
